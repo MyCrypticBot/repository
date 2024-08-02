@@ -1,8 +1,11 @@
-name: Run Python Script Daily
+name: Run Python Script
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    - cron: '50 20 * * *' # This runs the workflow at 8:50pm UTC aka 3:50 EST every day
+    - cron: '50 20 * * *' # This runs the workflow at 8:50pm UTC every day
 
 jobs:
   run-script:
