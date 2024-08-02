@@ -202,9 +202,9 @@ def backtest_strategy(initial_capital, leverage, sell_threshold, stop_loss_thres
     }
 
 
-plot_graphs = True
-send_emails = False
-print_statements = True
+plot_graphs = False
+send_emails = True
+print_statements = False
 
 # Run optimization with different parameter sets
 param_sets = [
