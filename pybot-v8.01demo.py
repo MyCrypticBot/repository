@@ -287,19 +287,19 @@ for file_path in stock_symbols:
 
             if buy_signal.index[-1] == today:
                 last_price = option_data_all_dates['close'][-1]
-                if last_buy_signal:
+                if last_buy_signal and results[0]['buy_dates'][-1] == today:
                     date_str = today.strftime('%Y-%m-%d')
                     print(f'\n\n----Buy Signal Today {file_path} {date_str} ----\n\n')
                     if send_emails:
-                        send_email(f"Buy Signal Today - {file_path} - {date_str}", f"Buy {file_path} at ${last_price:.2f} on {date_str}")
+                        send_email(f"Buy Signal Today - {file_path} - {date_str}", f"Buy {file_path} at ${last_price:.2f} on {date_str} \n If this email was not between 3:50pm-4:00pm EST, then invalid")
 
             if sell_signal.index[-1] == today:
                 last_price = option_data_all_dates['close'][-1]
-                if last_sell_signal:
+                if last_sell_signal and results[0]['sell_dates'][-1] == today:
                     date_str = today.strftime('%Y-%m-%d')
                     print(f'\n\n----Sell Signal Today {file_path} {date_str} ----\n\n')
                     if send_emails:
-                        send_email(f"Sell Signal Today - {file_path} - {date_str}", f"Sell {file_path} at ${last_price:.2f} on {date_str}")
+                        send_email(f"Sell Signal Today - {file_path} - {date_str}", f"Sell {file_path} at ${last_price:.2f} on {date_str} \n If this email was not between 3:50pm-4:00pm EST, then invalid")
 
             if print_statements:
                 # Find the best parameter set based on total return
