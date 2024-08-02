@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '35 13 * * *' # This runs the workflow at 8:50pm UTC every day
+    - cron: '50 20 * * *' # This runs the workflow at 8:50pm UTC every day
 
 jobs:
   run-script:
