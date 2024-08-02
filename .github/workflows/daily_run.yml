@@ -26,4 +26,4 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run script
-        run: python pybot-v8.01demo.py # Replace with the path to your script
+        run: python pybot-v8.02demo.py # Replace with the path to your script
