@@ -2,7 +2,10 @@ name: Run Python Script
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # This runs the workflow every 5 minutes for testing
+    # Runs at 3:50 PM EST
+    - cron: '50 20 * * *' # 8:50 PM UTC (3:50 PM EST)
+    # Runs at 3:50 PM EDT
+    - cron: '50 19 * * *' # 7:50 PM UTC (3:50 PM EDT)    
   workflow_dispatch: {}
 
 jobs:
