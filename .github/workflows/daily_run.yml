@@ -2,7 +2,7 @@ name: Run Python Script
 
 on:
   schedule:
-    - cron: '40 1 * * *' # This runs the workflow at 8:50pm UTC every day
+    - cron: '*/5 * * * *' # This runs the workflow every 5 minutes for testing
 
 jobs:
   run-script:
