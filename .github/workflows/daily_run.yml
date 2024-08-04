@@ -3,9 +3,9 @@ name: Run Python Script
 on:
   schedule:
     # Runs at 3:50 PM EST
-    - cron: '50 20 * * *' # 8:50 PM UTC (3:50 PM EST)
+    - cron: '45 20 * * *' # 8:45 PM UTC (3:45 PM EST)
     # Runs at 3:50 PM EDT
-    - cron: '50 19 * * *' # 7:50 PM UTC (3:50 PM EDT)    
+    - cron: '45 19 * * *' # 7:45 PM UTC (3:45 PM EDT)    
   workflow_dispatch: {}
 
 jobs:
